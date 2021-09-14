@@ -7,12 +7,14 @@ namespace Jugadores
     public bool Activo { get; set; }
 
     public List<Arma> Armas { get; set; }
+    public List<Escudo> Escudos { get; set; }
 
-    public Jugador(string Name, int Edad, List<Arma> Armas, bool Activo = false) {
-      this.Name = Name;
-      this.Edad = Edad;
-      this.Activo = Activo;
-      this.Armas = Armas;
+    public Jugador(string name, int edad, List<Arma> armas, List<Escudo> escudos, bool activo = false) {
+      Name = name;
+      Edad = edad;
+      Activo = activo;
+      Armas = armas;
+      Escudos = escudos;
     }
 
     public string IsActivo() { 
@@ -27,6 +29,20 @@ namespace Jugadores
     public Arma(string Name, int Balas) {
       this.Name = Name;
       this.Balas = Balas;
+    }
+
+    
+  }
+  public class Escudo {
+    public string Name { get; set; }
+    public int Porcentaje { get; set; }
+
+    public string Test { get; set; }
+
+    public Escudo(string Name, int Porcentaje, string Test) {
+      this.Name = Name;
+      this.Porcentaje = Porcentaje;
+      this.Test = Test;
     }
 
     
